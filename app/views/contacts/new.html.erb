@@ -1,7 +1,7 @@
 <%= form_with(model: @contact, local: true) do |form| %>
   <% if @contact.errors.any? %>
     <div id="error_explanation">
-      <h2>Contactには140文字以内で入力が必要です。</h2>
+      <h2><%= @contact.errors.count %>件のエラーがあります。</h2>
       <ul>
       <% @contact.errors.full_messages.each do |message| %>
         <li><%= message %></li>
